@@ -68,8 +68,6 @@ export default class VIForegroundService {
      * @return Promise
      */
     static async updateNotification(notificationConfig) {
-
-        console.log(' Update Service Triggered')
         return await ForegroundServiceModule.updateNotification(notificationConfig);
     }
 
