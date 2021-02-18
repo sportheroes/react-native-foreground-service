@@ -62,6 +62,16 @@ export default class VIForegroundService {
     }
 
     /**
+     * Updates a notification of a running service.
+     * If service is not running, it will be started automatically like calling startService.
+     * @param {NotificationConfig} notificationConfig - Notification config
+     * @return Promise
+     */
+    static async updateNotification(notificationConfig) {
+        return await ForegroundServiceModule.updateNotification(notificationConfig);
+    }
+
+    /**
      * Stop foreground service
      *
      * @return Promise
